@@ -1,5 +1,6 @@
 fly-tailscale
 ------------------
+![Action Status: auto update tailscale version](https://github.com/umarhadi/fly-tailscale/actions/workflows/auto-update-ts.yml/badge.svg)
 
 This repo shows how to run tailscale on fly, specifically to run exit nodes.
 If you want to add tailscale to a fly.io application, follow this guide instead: https://tailscale.com/kb/1132/flydotio/
@@ -98,9 +99,6 @@ flyctl scale count 2
 ```
 Wait for the node to appear in tailscale, confirm it to be a legit exit node (step 11), choose it in your client and in less than 5 minutes to access the internet in another place.
 Note: Scaling up also reinitializes the existing nodes. Just use the newly created one and delete the old.
-Note: It seems not all fly regions have their own exit routers and some use another for egress traffic. This needs further investigation.
-
-https://user-images.githubusercontent.com/3500621/129452587-7ff90cd2-5e6d-4e39-9a91-548c498636f5.mp4
 
 #### 14. halt
 In case you want to stop:
